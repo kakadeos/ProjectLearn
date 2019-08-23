@@ -20,11 +20,11 @@
         </div>
     </mat-drawer>
     <mat-drawer-content>
-        <mat-grid-list cols="4">
-            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
-                [style.background]="tile.color">
-                {{tile.text}}
-            </mat-grid-tile>
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>1</mat-grid-tile>
+            <mat-grid-tile>2</mat-grid-tile>
+            <mat-grid-tile>3</mat-grid-tile>
+            <mat-grid-tile>4</mat-grid-tile>
         </mat-grid-list>
         <div class='bottom-dashboard-button' fxLayoutAlign='end start'>
             <button mat-fab color='accent' (click)="drawer.toggle()" class="setting-button">
