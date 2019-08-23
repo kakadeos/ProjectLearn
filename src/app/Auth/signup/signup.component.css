@@ -1,0 +1,31 @@
+mat-card{
+    width: 300px;
+    margin: 0 auto;
+}
+mat-form-field {
+    width: 80%;
+}
+div {
+    height: 70%;;
+}
+
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('src\assets\signup.png');
+    background-size: cover;
+    align-content: center;
+  }
+
+  .mat-card-avatar {
+    height: 80px;
+    width: 80px;
+    margin-left: 9%;
+    margin-bottom: 25px;
+  }
+
+  mat-card {
+      width: 300px;
+  }

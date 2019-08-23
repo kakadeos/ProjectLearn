@@ -1,0 +1,25 @@
+<div fxLayout fxLayoutAlign='center center'>
+    <mat-card class="example-card">
+        <mat-card-header fxLayoutAlign='center center'>
+            <div mat-card-avatar class="example-header-image"></div>
+        </mat-card-header>
+        <form (submit)='onLogin(loginForm)' #loginForm="ngForm">
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign='center center'>
+                    <mat-form-field>
+                        <input matInput placeholder="Enter Username(Email Address)" type="email" name="emailAddress"
+                         ngModel >
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Enter Password" type="password"  name="password"
+                        ngModel>
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+            <mat-card-actions fxLayout="row" fxLayoutAlign='center center'> 
+                <button mat-raised-button color="primary">Login</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+
+</div>

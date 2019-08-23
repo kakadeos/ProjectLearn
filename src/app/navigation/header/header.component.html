@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <span>ProjectLearn</span>
+    <span class="example-spacer"></span>
+    <nav>
+        <a routerLink="/" routerLinkActive="active">Home</a>
+        <a routerLink="/dashboard" *ngIf="isUserAuthorized">Dashboard</a>
+        <a routerLink="/login" *ngIf="!isUserAuthorized">Login</a>
+        <a routerLink="/signup" *ngIf="!isUserAuthorized">SignUp</a>
+        <a class="logout" mat-button (click)='onLogout()' *ngIf="isUserAuthorized">Logout</a>
+      </nav>
+</mat-toolbar>

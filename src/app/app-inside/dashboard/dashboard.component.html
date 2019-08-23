@@ -1,0 +1,26 @@
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+    <mat-drawer #drawer [mode]="push">
+        <div class="sidenav-menu" fxLayout='column' fxLayoutAlign='start top' fxLayoutGap="20px">
+            
+            <button mat-fab color='primary'>
+                <mat-icon>assignment_return</mat-icon>
+            </button>
+            <span>Task</span>
+            <button mat-fab color='primary'>
+                <mat-icon>contacts</mat-icon>
+            </button>
+            <span>contacts</span>
+            <button mat-fab color='primary'>
+                <mat-icon>assessment</mat-icon>
+            </button>
+            <span>Report</span>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div fxLayoutAlign='end start'>
+            <button mat-fab color='primary' (click)="drawer.toggle()" class="setting-button">
+                <mat-icon>dashboard</mat-icon>
+            </button>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
