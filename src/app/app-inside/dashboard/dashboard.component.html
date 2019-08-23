@@ -1,24 +1,33 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
-    <mat-drawer #drawer [mode]="push">
+    <mat-drawer #drawer mode="push">
         <div class="sidenav-menu" fxLayout='column' fxLayoutAlign='start top' fxLayoutGap="20px">
-            
-            <button mat-fab color='primary'>
+            <button mat-fab color='accent' class="sidenav-button">
                 <mat-icon>assignment_return</mat-icon>
             </button>
-            <span>Task</span>
-            <button mat-fab color='primary'>
+            <span fxLayoutAlign='center center' class='sidenav-span'>Task</span>
+            <button mat-fab color='accent' class="sidenav-button">
                 <mat-icon>contacts</mat-icon>
             </button>
-            <span>contacts</span>
-            <button mat-fab color='primary'>
+            <span fxLayoutAlign='center center' class='sidenav-span'>Contact</span>
+            <button mat-fab color='accent' class="sidenav-button">
                 <mat-icon>assessment</mat-icon>
             </button>
-            <span>Report</span>
+            <span fxLayoutAlign='center center' class='sidenav-span'>Report</span>
+            <button mat-fab color='accent' class="sidenav-button">
+                <mat-icon>settings</mat-icon>
+            </button>
+            <span fxLayoutAlign='center center' class='sidenav-span'>Setting</span>
         </div>
     </mat-drawer>
     <mat-drawer-content>
-        <div fxLayoutAlign='end start'>
-            <button mat-fab color='primary' (click)="drawer.toggle()" class="setting-button">
+        <mat-grid-list cols="4">
+            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+                [style.background]="tile.color">
+                {{tile.text}}
+            </mat-grid-tile>
+        </mat-grid-list>
+        <div class='bottom-dashboard-button' fxLayoutAlign='end start'>
+            <button mat-fab color='accent' (click)="drawer.toggle()" class="setting-button">
                 <mat-icon>dashboard</mat-icon>
             </button>
         </div>

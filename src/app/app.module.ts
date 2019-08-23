@@ -16,6 +16,10 @@ import { DashboardComponent } from './app-inside/dashboard/dashboard.component';
 import { AuthenticationService } from './Auth/auth.service';
 import { AuthGuard } from './Auth/auth.guard';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactsComponent } from './app-inside/contacts/contacts.component';
+import { TaskComponent } from './app-inside/task/task.component';
+import { ReportComponent } from './app-inside/report/report.component';
+import { SettingComponent } from './app-inside/setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     SignupComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    ContactsComponent,
+    TaskComponent,
+    ReportComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule,
